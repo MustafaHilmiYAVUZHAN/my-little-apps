@@ -1,2 +1,2 @@
-# yazilimdepo
-My depo
+#yazılımdapo
+depo
