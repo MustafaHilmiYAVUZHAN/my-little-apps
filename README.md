@@ -1,2 +1,2 @@
-#yazılımdapo
-depo
+#Little app
+My little app
